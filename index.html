@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="A demo website for the Seventy Restaurant Template"
+    />
+    <meta name="keywords" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seventy.bonfork.net/" />
+    <meta property="og:title" content="Seventy Restaurant" />
+    <meta property="og:image" content="" />
+    <meta
+      property="og:description"
+      content="A demo website for the Seventy Restaurant Template"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--
+    ____   __   __ _  ____  __  ____  __ _
+    (  _ \ /  \ (  ( \(  __)/  \(  _ \(  / )
+    ) _ ((  O )/    / ) _)(  O ))   / )  (
+    (____/ \__/ \_)__)(__)  \__/(__\_)(__\_)
+    -->
+
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon-180x180.png"
+    />
+
+    <title>Seventy</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/kak1mxp.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/animsition.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css"
+    />
+    <link
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.css"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=ID_PROPERTY_HERE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "ID_PROPERTY_HERE");
+    </script>
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      if (
+        ua.indexOf("safari") != -1 ||
+        ua.indexOf("firefox") != -1 ||
+        ua.indexOf("edge") != -1
+      ) {
+        if (ua.indexOf("chrome") > -1) {
+          console.log("chrome");
+        } else {
+          if (ua.match(/iPad/i) || ua.match(/iPhone/i)) {
+            console.log("ios safari");
+          } else {
+            jQuery(function ($) {
+              //on document.ready
+              $("#date").datepicker({ dateFormat: "yy-mm-dd", minDate: 0 });
+            });
+
+            $(function () {
+              $("#time").timepicker().val("7:30pm");
+            });
+          }
+        }
+      }
+    </script>
+    <!-- Schema json -->
+    <script id="data" type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Restaurant",
+        "priceRange": "$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "addressCountry": "Canada",
+          "postalCode": "M5E 1Z9",
+          "streetAddress": "12 Yonge St."
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.643162,
+          "longitude": -79.376259
+        },
+        "name": "Seventy Restaurant",
+        "telephone": "+44 (0)1234 56789",
+        "url": "https://seventy.bonfork.net",
+        "paymentAccepted": "",
+        "description": "Seventy Restaurant Demo description. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam id urna egestas ultricies nulla at viverra nibh donec sollicitudin metus sit amet est laoreet gravida donec cursus enim quis.",
+
+        "servesCuisine": "French cuisine",
+        "hasMenu": "https://seventy.bonfork.net/menu",
+        "acceptsReservations": "True",
+
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "11:00",
+            "closes": "23:00"
+          }
+        ],
+        "image": "img/bg.jpg",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Menu",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Main Menu",
+              "itemListElement": [
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Steaks",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Seafood",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Dessert",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Wine List",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "priceCurrency": "$",
+                      "price": 7.5,
+                      "itemOffered": {
+                        "@type": "MenuItem",
+                        "name": "CANADIAN PRIME HEREFORD -GUELPH, ON",
+                        "description": "Tenderloin ",
+                        "image": [""],
+                        "nutrition": {
+                          "@type": "NutritionInformation",
+                          "calories": ""
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <div class="p-0 m-0 animsition">
+      <header>
+        <div class="container">
+          <div class="d-flex align-items-center flex-column">
+            <div id="logo-container">
+              <img
+                src="img/logo.svg"
+                class="logo-image"
+                id="logo"
+                alt="Seventy"
+              />
+            </div>
+
+            <p>
+              We are dedicated to always providing the freshest and most
+              innovative food and drink to our
+              <span class="under-word">customers</span> . We are committed to
+              delivering the best possible service and facilities for our
+              customers in the best possible conditions so that they can enjoy
+              the best Italian food and drink
+            </p>
+
+            <a href="#about" class="scroll-link">continue</a>
+          </div>
+        </div>
+      </header>
+      <section class="about" id="about">
+        <div class="container">
+          <ul class="navbar-nav nav">
+            <li class="nav-item">
+              <a class="nav-link" title="Story" href="#story">Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Our menu" href="#our-menu">Our menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Awards" href="#awards">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" title="Reservations" href="#reservation"
+                >Reservations</a
+              >
+            </li>
+          </ul>
+
+          <h2 class="about-title wow fadeInUp">
+            Dining Excellence
+          </h2>
+          <p class="mx-auto">
+            We are dedicated to always providing the freshest and most
+            innovative food and drink to our customers. We are committed to
+            delivering the best possible service and facilities for our
+            customers in the best possible conditions so that they can enjoy the
+            best Italian food and drink
+          </p>
+          <div class="row images no-gutters">
+            <div class="col-lg-6 text-center text-lg-right" id="gallery">
+              <img
+                src="img/stamp.svg"
+                class="stamp d-none d-lg-block"
+                alt="stamp"
+              />
+              <img
+                src="img/image-1.jpg "
+                class="image-1 img-fluid"
+                alt="image-1"
+              />
+              <img
+                src="img/image-2.jpg"
+                class="image-2 img-fluid"
+                alt="image-2"
+              />
+            </div>
+            <div class="col-lg-6 text-center text-lg-left">
+              <img
+                src="img/image-3.jpg"
+                class="image-3 img-fluid"
+                alt="image-3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="awards" id="story">
+        <div class="container" id="story-2">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="awards-title mr-auto ml-md-auto wow fadeInUp">
+                Gourmet, award winning dining in the heart of Riverdale
+              </h2>
+            </div>
+            <div class="col-md-6 text-right wow fadeInUp">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit nulla
+                porttitor nisi ac varius venenatis est arcu cursus nisl vel
+                egestas orci orci mattis enim vestibulum ultrices sodales nunc
+                non ornare nullam tincidunt magna felis et varius ipsum
+                ultrices.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit nulla
+                porttitor nisi ac varius venenatis est arcu cursus nisl vel
+                egestas orci orci mattis enim vestibulum ultrices sodales nunc
+                non ornare nullam tincidunt magna felis et varius ipsum
+                ultrices.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row text-center three-awards" id="awards">
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <img
+                  src="img/2019-award.svg"
+                  alt="award"
+                  class="img-fluid award-1 wow fadeInUp"
+                />
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <img
+                  src="img/2020-award.svg"
+                  alt="award"
+                  class="img-fluid award-2 wow fadeInUp"
+                />
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <img
+                  src="img/2021-award.svg"
+                  alt="award"
+                  class="img-fluid award-3 wow fadeInUp"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4" id="menu">
+                <ul
+                  class="navbar-nav nav-2 nav-stacked wow fadeInUp"
+                  id="myScrollspy"
+                >
+                  <div class="nav-2-text ml-md-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" title="Steaks" href="#steaks"
+                        >Steaks</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" title="Seafood" href="#seafood"
+                        >Seafood</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" title="Dessert" href="#dessert"
+                        >Dessert</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" title="Wine List" href="#wine-list"
+                        >Wine List</a
+                      >
+                    </li>
+                  </div>
+                </ul>
+              </div>
+              <div class="col-md-8" id="our-menu">
+                <h2 class="menu-tittle wow fadeInUp">Menu</h2>
+                <div class="menu-paraf">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit nulla
+                  porttitor nisi ac varius venenatis est arcu cursus nisl vel
+                  egestas orci orci mattis enim vestibulum ultrices sodales nunc
+                  non ornare nullam tincidunt magna felis et varius ipsum
+                  ultrices.
+                </div>
+                <div class="first-menu" id="steaks">
+                  <h3 class="main-dish">Steaks</h3>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu" id="seafood">
+                  <h3 class="main-dish">Seafood</h3>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu" id="dessert">
+                  <h3 class="main-dish">Dessert</h3>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu" id="wine-list">
+                  <h3 class="main-dish">Wine List</h3>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="box">
+                        <h4 class="food-tittle">
+                          Canadian Prime Hereford -Guelph, ON
+                        </h4>
+                      </div>
+                      <p>Tenderloin <span class="price">- $7.5</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="position-relative">
+                <img src="img/stamp.svg" class="stamp-2" alt="stamp" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="review">
+        <div class="container d-flex flex-column align-items-center">
+          <div class="row">
+            <p>in the press</p>
+          </div>
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="row icons">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="comment">
+                “Excellent burger and fries with lots of bun choices. This is my
+                go to burger joint, the staff are friendly and courteous
+              </div>
+            </div>
+            <div class="item">
+              <div class="row icons">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="comment">
+                “Excellent burger and fries with lots of bun choices. This is my
+                go to burger joint, the staff are friendly and courteous
+              </div>
+            </div>
+            <div class="item">
+              <div class="row icons">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="comment">
+                “Excellent burger and fries with lots of bun choices. This is my
+                go to burger joint, the staff are friendly and courteous
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="map"></div>
+      <section class="reservation" id="reservation">
+        <h2 class="reservation-title">Reservations</h2>
+        <div class="container">
+          <div class="alert" role="alert" id="alert-success">
+            Your reservation request has been sent. One of our staff will get back to you with a confirmation.
+        </div>
+        <div class="alert" role="alert" id="alert-error">
+            Something went wrong. The reservation could not been sent.    
+        </div>
+          <form method="GET" id="reservation-form">
+            <div class="form-group">
+              <label for="NO. of Guests"
+                >NO. of guests
+                <span>*</span>
+              </label>
+              <input
+                type="number"
+                name="guests"
+                class="form-control"
+                value="2"
+                placeholder="Please Select"
+                required
+              />
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="Time"
+                    >Time
+                    <span>*</span>
+                  </label>
+                  <div class="input-container">
+                    <i class="far fa-clock d-none d-sm-block"></i>
+                    <input
+                      type="text"
+                      name="Time"
+                      id="time"
+                      class="form-control"
+                      value="19:30"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="Date"
+                    >Date
+                    <span>*</span>
+                  </label>
+                  <div class="input-container">
+                    <i class="fas fa-calendar-day d-none d-sm-block"></i>
+                    <input
+                      type="text"
+                      name="Date"
+                      class="form-control"
+                      id="date"
+                      placeholder="Please Select"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Name"
+                >Name
+                <span>*</span>
+              </label>
+              <input type="text" name="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="Email"
+                >Email
+                <span>*</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                oninvalid="setCustomValidity('Please enter a valid email address!')"
+                onchange="setCustomValidity('')"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="Phone"
+                >Phone
+                <span>*</span>
+              </label>
+              <br />
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-submit btn-block" id="submit">
+              Book your table
+            </button>
+
+            <input type="hidden" name="_to" value="matty@aledia.ca" />
+            <input type="text" name="_gotcha" style="display: none;" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Reservation Submission"
+            />
+          </form>
+        </div>
+      </section>
+      <footer class="position-relative">
+        <div class="container">
+          <div class="row d-flex flex-column align-items-center">
+            <img src="img/logo.svg" alt="logo" />
+            <div class="footer-text">
+              <p>
+                123 Demo Street New York, NY 12345
+              </p>
+              <span class="yellow"> Mon-Sun:</span>
+              <p>Noon - Midnight</p>
+              <p>
+                123.456.7890
+              </p>
+            </div>
+          </div>
+          <form
+            id="newsletter-form"
+            class="simform"
+            autocomplete="off"
+            method="POST"
+          >
+            <div class="simform-inner">
+              <ol class="questions">
+                <li>
+                  <input
+                    type="text"
+                    name="Name"
+                    id="name"
+                    required="required"
+                    placeholder="your name"
+                  />
+                </li>
+                <li>
+                  <input
+                    type="email"
+                    name="Email"
+                    id="email"
+                    required="required"
+                    placeholder="your email"
+                  />
+                </li>
+              </ol>
+              <button class="submit" type="submit">Submit</button>
+              <div class="controls">
+                <button class="next"></button>
+                <div class="progress"></div>
+                <span class="number">
+                  <span class="number-current"></span>
+                  <span class="number-total"></span>
+                </span>
+                <span class="error-message"></span>
+              </div>
+            </div>
+            <span class="final-message"></span>
+
+            <input type="hidden" name="_to" value="matty@aledia.ca" />
+            <input type="text" name="_gotcha" style="display: none;" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Newsletter Submission"
+            />
+          </form>
+        </div>
+        <ul class="nav-3 d-flex justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" title="Story" href="#story">Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" title="Menu" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" title="Gallery" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" title="Contacts" href="#reservation"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+        <div class="footer-icon d-flex justify-content-center">
+          <a href="https://www.instagram.com/bonfork/" target="new_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.facebook.com/bonfork/" target="new_blank">
+            <i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/_Bonfork_" target="new_blank">
+            <i class="fab fa-twitter"></i
+          ></a>
+        </div>
+        <div class="end">
+          Restaurant website by
+          <a href="https://bonfork.com/" target="new_blank">bonfork</a>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(window).scroll(function () {
+        var theta = $(window).scrollTop() / 100;
+        $(".stamp").css({ transform: "rotate(" + theta + "rad)" });
+      });
+      $(window).scroll(function () {
+        var theta = $(window).scrollTop() / 100;
+        $(".stamp-2").css({ transform: "rotate(" + theta + "rad)" });
+      });
+
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500,
+      });
+
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf("safari") != -1) {
+        if (ua.indexOf("safari") != -1) {
+          document.getElementById("date").type = "date";
+          document.getElementById("time").type = "time";
+        } else {
+          if (ua.match(/iPad/i) || ua.match(/iPhone/i)) {
+            document.getElementById("time").type = "time";
+          } else {
+            console.log("safari");
+          }
+        }
+      }
+
+      new WOW().init();
+    </script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM3CAR8-maijk8Bo17UqnojDp1Ko5VUwo&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

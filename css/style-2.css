@@ -1,0 +1,42 @@
+.video,
+.canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  z-index: 5;
+
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5),
+    0.5
+  ) !important;
+  opacity: 35%;
+}
+
+header {
+  overflow: hidden;
+
+  background: none;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+header .container {
+  position: relative;
+  z-index: 9999;
+}
+header p,
+header a,
+.scroll-link::before,
+#logo-container:before {
+  color: rgb(221, 219, 219) !important;
+}
