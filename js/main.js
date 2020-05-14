@@ -326,7 +326,8 @@ telInput.intlTelInput({
     },
   });
 })(jQuery);
-// Reservation form with PHP
+
+
 if ($('#reservation-form').length) {
   $('#reservation-form').each(function(){
       $(this).validate({
