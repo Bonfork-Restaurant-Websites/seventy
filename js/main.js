@@ -197,20 +197,6 @@ function initMap() {
   });
 }
 
-// Helper function to get form data in the supported format
-function getFormDataString(formEl) {
-  var formData = new FormData(formEl),
-    data = [];
-
-  for (var keyValue of formData) {
-    data.push(
-      encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1])
-    );
-  }
-
-  return data.join("&");
-}
-
 // Newsletter Steps Form
 var theForm = document.getElementById("newsletter-form");
 
@@ -228,26 +214,21 @@ new stepsForm(theForm, {
 
     // let's just simulate something...
     var messageEl = theForm.querySelector(".final-message");
-    messageEl.innerHTML = "Thank you! We'll be in touch.";
-    classie.addClass(messageEl, "show");
 
     // SEND EMAIL
-    var request = new XMLHttpRequest();
-
-    request.addEventListener("load", function () {
-      if (request.status === 302) {
-        // CloudCannon redirects on success
-        // It worked
-        console.log("Worked");
+    $.ajax({
+      type: "POST",
+      url:"./includes/mail-2.php",
+      data: $(form).serialize(),
+      success: function() {
+        messageEl.innerHTML = "Thank you! We'll be in touch.";
+        classie.addClass(messageEl, "show");
+      },
+      error: function(){
+        messageEl.innerHTML = "Something went wrong.";
+        classie.addClass(messageEl, "show");
       }
     });
-
-    request.open(theForm.method, theForm.action);
-    request.setRequestHeader(
-      "Content-Type",
-      "application/x-www-form-urlencoded"
-    );
-    request.send(getFormDataString(theForm));
   },
 });
 
@@ -339,14 +320,16 @@ if ($('#reservation-form').length) {
                   data: $(form).serialize(),
                   success: function() {
                       document.getElementById('alert-success').style.display = 'block';
+                      console.log("Success");
                   },
 
                   error: function(){
                       document.getElementById('alert-error').style.display = 'block';
-                     
+                      console.log("Fail");
                   }
               });
           }
       });
   });
 } 
+
