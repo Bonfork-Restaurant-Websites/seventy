@@ -1,3 +1,6 @@
+# Seventy, a free restaurant template
+Demo https://bonfork.com/preview/seventy-preview
+
 # How to get Google API key for maps?
 
 To get an API key:
